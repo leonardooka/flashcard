@@ -6,10 +6,7 @@ import pandas
 
 BACKGROUND_COLOR = "#B1DDC6"
 english_word = ""
-try:
-    data = pandas.read_csv("words_to_learn.csv")
-except FileNotFoundError:
-    data = pandas.read_csv("en-br.csv")
+data = pandas.read_csv("en-br.csv")
 to_learn = data.to_dict(orient="records")
 english_word = {}
 
